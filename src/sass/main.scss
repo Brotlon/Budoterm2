@@ -183,7 +183,7 @@ h1 {
         aspect-ratio: 300 / 288;
     }
 
-    &__gallery-bg {        
+    &__gallery-bg {
         margin-left: 2rem;
 
         &--white {
@@ -227,6 +227,17 @@ h1 {
     }
 
     &__gallery-img {
+        width: 100%;
+    }
+
+    &__gallery-psb-logo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 140px;
+    }
+
+    &__gallery-psb-logo-img {
         width: 100%;
     }
 }
