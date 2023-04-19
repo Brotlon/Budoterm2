@@ -50,9 +50,9 @@ button {
 
 h1 {
     width: 300px;
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     font-weight: 600;
-    line-height: 34px;
+    line-height: 38px;
     text-align: center;
 }
 
@@ -179,6 +179,54 @@ h1 {
 
 .aboutus {
     &__gallery-box {
+        position: relative;
         aspect-ratio: 300 / 288;
+    }
+
+    &__gallery-bg {        
+        margin-left: 2rem;
+
+        &--white {
+            background-color: $black5;
+            height: 35%;
+        }
+
+        &--gray {
+            background-color: $black25;
+            height: 65%;
+        }
+    }
+
+    &__gallery-pictures {
+        position: absolute;
+        top: 15%;
+        left: 0;
+        padding-right: 2rem;
+
+        &__arrow {
+            position: absolute;
+            top: 99%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2rem;
+            border: 1px solid $black10;
+            width: 40px;
+            height: 40px;
+            background-color: $black10;
+
+            &--left {
+                right: 40px;
+                border-right: none;
+            }
+
+            &--right {
+                right: 0;
+            }
+        }
+    }
+
+    &__gallery-img {
+        width: 100%;
     }
 }
