@@ -1,0 +1,139 @@
+$primary-color: #DE2119;
+$secondary-color: #EB560E;
+$tertiary-color: #29166F;
+$quaternary-color: #FFF500;
+
+$main-gradient: linear-gradient(-90deg, #EB560E, #DE2119);
+$minor-gradient: linear-gradient(270deg, #EB560E, #FF8A00);
+
+$black: #1D1610;
+$black75: #1D1610BF;
+$black50: #1D161080;
+$black25: #1D161040;
+$black10: #1D16101A;
+$black5: #1D16100D;
+
+
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+p {
+    color: $black75;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+
+
+////////////////////      NAWIGACJA     ////////////////////
+
+.navbar {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+
+    &__brand {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: .5rem;
+        border-bottom: 1px solid transparent;
+        background-image: linear-gradient(#FDFBFB, #F3F5F6);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #DEDFE0;
+        }
+    }
+
+    &__logo-img {
+        padding: 1rem;
+        height: 52px;
+    }
+
+    &__burger-btn {
+        display: block;
+        padding: .5rem 1rem;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__links {
+        padding: 1rem 0;
+        border-bottom: 1px solid #DEDFE0;
+        background-color: #F3F5F6;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        pointer-events: none;
+        transition: clip-path .3s;
+    }
+
+    &__list-link {
+        display: block;
+        margin: 0 1rem;
+        padding: 1rem;
+        color: $black;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    &__links-line {
+        margin: 1rem 2rem;
+        width: 4rem;
+        height: 1px;
+        background-color: #C1BFBF;
+    }
+
+    &__facebook-link {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    &__facebook-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .show-nav {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        pointer-events: auto;
+    }
+}
