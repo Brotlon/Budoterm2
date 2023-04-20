@@ -37,6 +37,10 @@ p {
     line-height: 24px;
 }
 
+li {
+    font-family: 'Inter', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -256,5 +260,20 @@ h3 {
 
     &__paragraph {
         margin-top: 2.4rem;
+    }
+}
+
+
+
+
+
+////////////////////      OFERTA     ////////////////////
+
+.offer {
+    &__card {
+        display: flex;
+        margin-bottom: 3.2rem;
+        background-color: $black10;
+        box-shadow: -2px 2px 4px #c5c5c5;
     }
 }
