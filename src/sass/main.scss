@@ -28,6 +28,7 @@ $black5: #1D16100D;
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 32px;
 }
 
 p {
@@ -72,7 +73,7 @@ h1 {
 h3 {
     margin-bottom: 2.4rem;
     font-size: 2rem;
-    line-height: 39px;
+    line-height: 29px;
 }
 
 h6 {
@@ -288,9 +289,100 @@ h6 {
                 .offer__card__left-bar {
                     background-color: #A58785;
                 }
-
+                
                 .offer__card__picture {
                     background-image: url('../img/offer1.jpg');
+                }
+            }
+
+            .offer__card:nth-of-type(2) {
+                .offer__card__left-bar {
+                    background-color: #979BA6;
+                }
+                
+                .offer__card__picture {
+                    background-image: url('../img/offer2.jpg');
+                }
+            }
+        }
+        
+        .offer__cards-row:nth-of-type(2) {
+            .offer__card:nth-of-type(1) {
+                .offer__card__left-bar {
+                    background-color: #BEB6A3;
+                }
+                
+                .offer__card__picture {
+                    background-image: url('../img/offer3.jpg');
+                    background-position: center;
+                }
+            }
+            
+            .offer__card:nth-of-type(2) {
+                .offer__card__left-bar {
+                    background-color: #938B7C;
+                }
+                
+                .offer__card__picture {
+                    background-image: url('../img/offer4.jpg');
+                }
+            }
+        }
+        
+        .offer__cards-row:nth-of-type(3) {
+            .offer__card:nth-of-type(1) {
+                .offer__card__left-bar {
+                    background-color: #E0E1DB;
+                }
+                
+                .offer__card__picture {
+                    background-image: url('../img/offer5.jpg');
+                }
+            }
+
+            .offer__card:nth-of-type(2) {
+                .offer__card__left-bar {
+                    background-color: #DAD2BF;
+                }
+                
+                .offer__card__picture {
+                    background-image: url('../img/offer6.jpg');
+                    background-position: center;
+                }
+            }
+        }
+        
+        .offer__cards-row:nth-of-type(4) {
+            .offer__card:nth-of-type(1) {
+                .offer__card__left-bar {
+                    background-color: #CED5C8;
+                }
+
+                .offer__card__picture {
+                    background-image: url('../img/offer7.jpg');
+                    background-position: center;
+                }
+            }
+
+            .offer__card:nth-of-type(2) {
+                .offer__card__left-bar {
+                    background-color: #E3D4B8;
+                }
+
+                .offer__card__picture {
+                    background-image: url('../img/offer8.jpg');
+                }
+            }
+        }
+        
+        .offer__cards-row:nth-of-type(5) {
+            .offer__card:nth-of-type(1) {
+                .offer__card__left-bar {
+                    background-color: #BE8E5D;
+                }
+                
+                .offer__card__picture {
+                    background-image: url('../img/offer9.jpg');
                 }
             }
         }
@@ -330,7 +422,6 @@ h6 {
     }
 
     &__card__list {
-        // list-style-position: inside;
         padding: 0.8rem;
         padding-right: 1.6rem;
     }
