@@ -11,6 +11,10 @@ const arrowRight = document.querySelector('.aboutus__gallery-pictures__arrow--ri
 let autoplayGallery
 
 
+const weekDays = document.querySelectorAll('.day')
+const openHours = document.querySelectorAll('.time')
+
+
 const footerYear = document.querySelector('.footer__year')
 
 
@@ -106,6 +110,25 @@ const startGalleryAutoplay = () => {
 }
 
 
+const applyBoldText = () => {
+    const currentDay = new Date().getDay()
+
+    let emptyTable = []
+
+    let weekDaysTable = emptyTable.concat(...weekDays)
+    const sunday = weekDaysTable.pop()
+    weekDaysTable.unshift(sunday)
+
+    emptyTable = []
+    let openHoursTable = emptyTable.concat(...openHours)
+    const sundayHours = openHoursTable.pop()
+    openHoursTable.unshift(sundayHours)
+
+    weekDaysTable[currentDay].classList.add('text-bold')
+    openHoursTable[currentDay].classList.add('text-bold')
+}
+
+
 const handleFooterYear = () => {
     const currentYear = new Date().getFullYear()
     footerYear.textContent = currentYear
@@ -123,5 +146,7 @@ document.addEventListener('click', checkClick)
 startGalleryAutoplay()
 arrowLeft.addEventListener('click', previousPicture)
 arrowRight.addEventListener('click', nextPicture)
+
+applyBoldText()
 
 handleFooterYear()
