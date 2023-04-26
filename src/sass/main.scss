@@ -85,6 +85,7 @@ h6 {
     top: 0;
     z-index: 9999;
     width: 100%;
+    border-top: 1px solid #DEDFE0;
 
     &__brand {
         position: relative;
@@ -120,6 +121,7 @@ h6 {
         padding: .5rem 1rem;
         border: none;
         background-color: transparent;
+        cursor: pointer;
     }
 
     &__links {
@@ -131,6 +133,10 @@ h6 {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         pointer-events: none;
         transition: clip-path .3s;
+    }
+
+    &__list {
+        list-style: none;
     }
 
     &__list-link {
@@ -165,7 +171,7 @@ h6 {
     }
 
     .show-nav {
-        z-index: 9999;
+        // z-index: 9999;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         pointer-events: auto;
     }
@@ -670,7 +676,6 @@ h6 {
 }
 
 
-
 // =============================================================================
 
 @media (min-width: 560px) {
@@ -678,6 +683,9 @@ h6 {
         padding-top: 8rem;
         padding-left: 4rem;
         padding-right: 4rem;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1 {
@@ -884,5 +892,75 @@ h6 {
         &__paragraph {
             font-size: 1.4rem;
         }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 800px) {
+
+    ////////////////////      NAWIGACJA     ////////////////////
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 3rem;
+        padding-right: 2rem;
+        border-bottom: 1px solid #DEDFE0;
+        background-image: linear-gradient(#FDFBFB, #F3F5F6);
+
+        &__brand {
+            background-image: none;
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__burger-btn {
+            display: none;
+        }
+
+        &__links {
+            position: static;
+            display: flex;
+            align-items: center;
+            border-bottom: none;
+            width: auto;
+            background-color: transparent;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            pointer-events: auto;
+            transition: none;
+        }
+
+        &__list {
+            display: flex;
+        }
+
+        &__list-link {
+            font-size: 1.6rem;
+        }
+
+        &__links-line {
+            width: 1px;
+            height: 1.6rem;
+        }
+
+        &__facebook-link {
+            width: auto;
+        }
+
+        &__facebook-svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    ////////////////////      HEADER     ////////////////////
+
+    .hero {
+        margin-top: 6.2rem;
     }
 }
