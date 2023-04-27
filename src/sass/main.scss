@@ -171,7 +171,6 @@ h6 {
     }
 
     .show-nav {
-        // z-index: 9999;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         pointer-events: auto;
     }
@@ -501,6 +500,10 @@ h6 {
     &__h6 {
         margin-top: 2.4rem;
         margin-bottom: 0.6rem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
     }
 
     &__opening-hours-box {
@@ -558,7 +561,7 @@ h6 {
 
 
 
-////////////////////      NAWIGACJA     ////////////////////
+////////////////////      FOOTER     ////////////////////
 
 .footer {
     background-color: $black5;
@@ -799,7 +802,6 @@ h6 {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -1;
             width: 96px;
             height: 100%;
             flex-grow: 0;
@@ -831,6 +833,7 @@ h6 {
         }
 
         &__card__picture {
+            z-index: 1;
             width: 50%;
             height: 246px;
         }
@@ -998,6 +1001,7 @@ h6 {
     }
 
     .container {
+        margin-bottom: 3.2rem;
         padding-top: 7.2rem;
         padding-right: 4rem;
         padding-left: 4rem;
@@ -1047,13 +1051,184 @@ h6 {
         }
 
         &__text {
-            width: 50%;
             margin-top: 0;
             padding-right: 2rem;
+            width: 50%;
         }
 
         &__paragraph {
             color: #1d1610ed;
         }
+    }
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+        &__cards {
+            .offer__cards-row:last-of-type {
+                .offer__card {
+                    width: calc(50% - 2rem);
+                }
+            }
+        }
+
+        &__cards-row {
+            display: flex;
+        }
+
+        &__card {
+            width: 50%;
+
+            &:nth-of-type(1) {
+                margin-right: 2rem;
+            }
+
+            &:nth-of-type(2) {
+                margin-left: 2rem;
+            }
+        }
+
+        &__card__left-bar {
+            width: 9%;
+            min-width: 36px;
+        }
+
+        &__card__h6-box {
+            margin-left: 9%;
+        }
+
+        &__card__picture {
+            height: 280px;
+        }
+
+        &__card__list {
+            width: 50%;
+        }
+    }
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        &__container {
+            margin-bottom: 6.4rem;
+        }
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__column {
+            width: calc(50% - 2rem);
+        }
+
+        &__column:first-of-type {
+            order: 1;
+        }
+
+        &__map-box {
+            aspect-ratio: 15 / 7;
+        }
+    }
+
+    ////////////////////      FOOTER     ////////////////////
+
+    .footer {
+        &__container {
+            margin-bottom: 0;
+            padding-top: .4rem;
+            padding-bottom: .4rem;
+        }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 980px) {
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+        &__card__left-bar {
+            width: 15%;
+        }
+
+        &__card__h6-box {
+            margin-left: 15%;
+        }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 1040px) {
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+        &__card__left-bar {
+            width: 80px;
+        }
+
+        &__card__h6-box {
+            margin-left: 80px;
+        }
+
+        &__card__picture {
+            height: 256px;
+        }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 1100px) {
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+        &__card__left-bar {
+            width: 120px;
+        }
+
+        &__card__h6-box {
+            margin-left: 120px;
+        }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 1120px) {
+
+    ////////////////////      OFERTA     ////////////////////
+
+    .offer {
+        &__card__h6 {
+            padding-right: 2.4rem;
+            padding-left: 2.4rem;
+        }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 1200px) {
+
+    .container {
+        margin-right: 5rem;
+        padding-left: 5rem;
+    }
+    
+    ////////////////////      NAWIGACJA     ////////////////////
+
+    .navbar {
+        padding-left: 4rem;
+        padding-right: 3rem;
     }
 }
