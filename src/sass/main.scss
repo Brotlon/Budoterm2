@@ -1,6 +1,5 @@
 $black: #1D1610;
 $black75: #1D1610BF;
-// $black50: #1D161080;
 $black25: #1D161040;
 $black10: #1D16101A;
 $black5: #1D16100D;
@@ -71,6 +70,10 @@ h6 {
     line-height: 24px;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 .container {
     padding: 4rem 1rem 0;
 }
@@ -109,6 +112,11 @@ h6 {
 
     &__logo {
         cursor: pointer;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 
     &__logo-img {
@@ -122,6 +130,11 @@ h6 {
         border: none;
         background-color: transparent;
         cursor: pointer;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 
     &__links {
@@ -149,6 +162,11 @@ h6 {
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 
     &__links-line {
@@ -165,11 +183,24 @@ h6 {
         padding: 1rem;
         width: 20%;
         cursor: pointer;
-    }
+        transition: color .2s;
 
+        &:hover {
+            .navbar__facebook-svg {
+                path {
+                    fill: #1877F2;
+                }
+            }
+        }
+    }
+    
     &__facebook-svg {
         width: 20px;
         height: 20px;
+
+        path {
+            transition: fill .3s;
+        }
     }
 
     .show-nav {
@@ -235,6 +266,10 @@ h6 {
         left: 0;
         padding-right: 2rem;
 
+        &__arrow-left-svg, &__arrow-right-svg {
+            transition: transform .2s;
+        }
+
         &__arrow {
             position: absolute;
             top: 100%;
@@ -251,10 +286,22 @@ h6 {
             &--left {
                 right: 40px;
                 border-right: none;
+
+                &:hover {
+                    .aboutus__gallery-pictures__arrow-left-svg {
+                        transform: translateX(-5px);
+                    }
+                }
             }
 
             &--right {
                 right: 0;
+
+                &:hover {
+                    .aboutus__gallery-pictures__arrow-right-svg {
+                        transform: translateX(5px);
+                    }
+                }
             }
         }
     }
@@ -537,6 +584,11 @@ h6 {
         padding-bottom: 0.2rem;
         color: #1877F2;
         text-decoration: none;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 
     &__facebook-link-text {
@@ -548,11 +600,11 @@ h6 {
     }
 
     &__map-box {
+        margin-top: 2.4rem;
         aspect-ratio: 3 / 2;
     }
 
     &__map {
-        margin-top: 2.4rem;
         border: 2px solid #E9E8E8;
         box-shadow: -2px 2px 4px #C5C5C5;
         width: 100%;
@@ -887,8 +939,11 @@ h6 {
             line-height: 30px;
         }
 
-        &__map {
+        &__map-box {
             margin-top: 4rem;
+        }
+
+        &__map {
             box-shadow: -8px 8px 12px #C5C5C5;
         }
     }
@@ -1027,6 +1082,10 @@ h6 {
         margin-top: 6.6rem;
         margin-bottom: 0.8rem;
 
+        &__container {
+            margin-bottom: 0;
+        }
+
         &__logo-img {
             height: 96px;
         }
@@ -1132,6 +1191,7 @@ h6 {
         }
 
         &__map-box {
+            margin-top: 5.6rem;
             aspect-ratio: 15 / 7;
         }
     }
@@ -1342,6 +1402,11 @@ h6 {
             top: 94px;
             padding-right: 4rem;
 
+            &__arrow-left-svg, &__arrow-right-svg {
+                width: 15px;
+                height: 26px;
+            }
+
             &__arrow {
                 margin-right: 4rem;
                 width: 48px;
@@ -1361,7 +1426,7 @@ h6 {
             bottom: 10px;
             left: 72px;
             width: 204px;
-        }
+        }        
 
         &__paragraph {
             margin-top: 3.2rem;
@@ -1423,6 +1488,25 @@ h6 {
         &__card__list-item {
             font-size: 1.8rem;
             line-height: 27px;
+        }
+    }
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        margin-bottom: 9.6rem;
+
+        &__column {
+            width: 570px;
+        }
+
+        &__opening-hours-list-item {
+            font-size: 2rem;
+            line-height: 32px;
+        }
+
+        &__map-box {
+            margin-top: 6.4rem;
         }
     }
 }
